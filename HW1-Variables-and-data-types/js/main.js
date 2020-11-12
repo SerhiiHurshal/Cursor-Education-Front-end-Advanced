@@ -11,14 +11,14 @@ console.log(MIN_PRICE)
 const PRICE_OF_ALL_PRODUCTS = POSTCARD + PAINT + GLUE
 console.log(PRICE_OF_ALL_PRODUCTS)
 
-const APPROXIMATE_PRICE_OF_ALL_PRODUCTS = Math.floor(POSTCARD) + Math.floor(PAINT) + Math.floor(GLUE)
-console.log(APPROXIMATE_PRICE_OF_ALL_PRODUCTS)
+const PRICE_OF_ALL_PRODUCTS_WITHOUT_COINS = Math.floor(POSTCARD) + Math.floor(PAINT) + Math.floor(GLUE)
+console.log(PRICE_OF_ALL_PRODUCTS_WITHOUT_COINS)
 
 const ROUNDED_PRICE_OF_ALL_PRODUCTS = Math.round(PRICE_OF_ALL_PRODUCTS/100)*100
 console.log(ROUNDED_PRICE_OF_ALL_PRODUCTS)
 
 const EVEN_OR_ODD = Math.round(PRICE_OF_ALL_PRODUCTS) & 1
-console.log(EVEN_OR_ODD)
+console.log(Boolean(EVEN_OR_ODD))
 
 const USERS_MONEY = 500
 const REST = Math.round((USERS_MONEY - PRICE_OF_ALL_PRODUCTS)*100)/100
@@ -28,7 +28,7 @@ const AVARAGE_PRICE_OF_ALL_PRODUCTS = Math.round((PRICE_OF_ALL_PRODUCTS/3)*100)/
 console.log(AVARAGE_PRICE_OF_ALL_PRODUCTS)
 
 
-const DISCOUNT = Math.round((Math.random()*(0.99 - 0.01))*100)
+const DISCOUNT = Math.round((Math.random()*(100 - 1) + 1))
 console.log(DISCOUNT)
 
 const DISCOUNT_FROM_ALL_PRICE = Math.round((PRICE_OF_ALL_PRODUCTS * (DISCOUNT/100))*100)/100
@@ -42,7 +42,7 @@ const FINAL_STRING = `
 Максимальна ціна: ${MAX_PRICE} <br>
 Мінімальна ціна: ${MIN_PRICE} <br>
 Вартість всіх товарів: ${PRICE_OF_ALL_PRODUCTS} <br>
-Вартість всіх товарів без копійок: ${APPROXIMATE_PRICE_OF_ALL_PRODUCTS} <br>
+Вартість всіх товарів без копійок: ${PRICE_OF_ALL_PRODUCTS_WITHOUT_COINS} <br>
 Сума товарів округлена до сотень: ${ROUNDED_PRICE_OF_ALL_PRODUCTS} <br>
 Чи є сума товарів парним числом(false - парне, true - непарне): ${Boolean(EVEN_OR_ODD)} <br>
 Решта якщо клієнт платить 500: ${REST} <br>
