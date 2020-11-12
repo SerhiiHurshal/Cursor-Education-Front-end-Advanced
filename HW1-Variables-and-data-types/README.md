@@ -24,3 +24,5 @@
 Мінімальна ціна: 1111.11
 Вартість всіх товарів: 1345.66
 ...і так далі 
+
+[Сторінка на GitHub Pages](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW1-Variables-and-data-types/)
