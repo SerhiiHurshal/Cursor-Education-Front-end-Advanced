@@ -4,10 +4,8 @@ const SKIP_EVEN = confirm("Пропускати парні числа?")
 let sum = 0
 
 if(!isNaN(N) || !isNaN(M)){
-    let i = 0
-
     const IS_N_ODD = N & 1
-    if(!IS_N_ODD && SKIP_EVEN) i = N+1 //make even number odd if user need to skip even numbers
+    let i = (!IS_N_ODD && SKIP_EVEN)? N+1:N //make even number odd if user need to skip even numbers
 
     for(i; i <= M; SKIP_EVEN? i+=2: i++){
         sum+=i
