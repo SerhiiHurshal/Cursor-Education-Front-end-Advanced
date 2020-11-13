@@ -21,6 +21,5 @@ do{
         Your sum: ${sum}`)  
     }else{
         reloadPage = confirm("Wrong number! Try again?")
-        console.log(reloadPage)
     }
 }while(reloadPage !== false)
