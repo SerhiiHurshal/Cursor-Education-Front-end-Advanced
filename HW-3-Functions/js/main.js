@@ -75,10 +75,10 @@ const getRandomPassword = (lengthOFPassword = 8) =>{
     password = ''
 
     for (i = 0; i < lengthOFPassword; i++){
-        result += getRandomNumber(0,9)
+        password += getRandomNumber(0,9)
     }
 
-    return result
+    return password
 }
 
 
@@ -106,7 +106,7 @@ const isPalyndrom = (word) =>{
 
 
 const deleteDuplicateLetter = (word) =>{
-    const toLowerWord = word.toLowerCase()
+    let toLowerWord = word.toLowerCase()
 
     for (i = 0; i < toLowerWord.length; i++){
         if (toLowerWord.slice(i+1).includes(toLowerWord.charAt(i))){ 
