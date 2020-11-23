@@ -8,17 +8,17 @@ const makePairs = (students) => {
     const pairs = []
     const pair = []
 
-    for (i = 0; i < students.length; i++){
+    for (student of students){
         //finding girl without pair
-        if (students[i].charAt(students[i].length-1) == 'а' && !studentsWithPair.includes(students[i])){
-            pair.push(students[i])
-            studentsWithPair.push(students[i])
+        if (student.charAt(student.length-1) == 'а' && !studentsWithPair.includes(student)){
+            pair.push(student)
+            studentsWithPair.push(student)
 
-            for(j = 0; j < students.length; j++){
+            for(student of students){
                 //finding boy without pair
-                if (students[j].charAt(students[j].length-1) !== 'а' && !studentsWithPair.includes(students[j])){
-                    pair.push(students[j])
-                    studentsWithPair.push(students[j])
+                if (student.charAt(student.length-1) !== 'а' && !studentsWithPair.includes(student)){
+                    pair.push(student)
+                    studentsWithPair.push(student)
                     break
                 }
             }
@@ -61,8 +61,8 @@ const teamsGrades = (teams) => {
     let pair = ''
     let grade
 
-    for (i = 0; i < teams.length; i++){
-        pair += teams[i][0] + " і " + teams[i][1]
+    for (team of teams){
+        pair += team[0] + " і " + team[1]
         grade = Math.floor(Math.random() * (6 - 1) + 1)
         teamToGrade.push([pair, grade])
         pair = ''
@@ -74,8 +74,8 @@ const teamsGrades = (teams) => {
 
 const showArray = (array) => {
     let prettyArray = "["
-    for (i = 0; i < array.length; i++){
-        prettyArray += `[${array[i]}]`
+    for (element of array){
+        prettyArray += `[${element}]`
     }
     
     prettyArray += "]"
