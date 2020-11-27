@@ -123,37 +123,23 @@ const divideByThree = ((word) => {
 })
 
 
-const factorial = ((num) => {
-    if (num === 0)
-      { return 1; }
-    else
-      { return num * factorial( num - 1 ); }
-})
-
-
 const generateCombinations = ((word) => {
-    const splitedCombinations = []
-    const splitedWord = word.split("")
-    countOfLetters = word.length
-    countOfWords = factorial(countOfLetters) //кількість комбінацій букв
-
-    //заповнює масив пустими значеннями
-    for(i = 0; i < countOfWords; i++){
-        splitedCombinations[i] = ""
+    if (word.length < 2 ){
+        return word
     }
+      
+    let permutationsArray = [] 
     
-    for(j = 0; j < countOfLetters; j++){ //j-позиція на якій буде стояти буква в слові
-        for(i = 0; i < countOfLetters; i++){ //і-індекс букви в слові яку будемо додавати
-            for(k = i; k < countOfWords; k+=countOfLetters){ //к-індекс слова в яке додаємо букву
-                splitedCombinations[k]+=splitedWord[i]
-            }
+    for (let i = 0; i < word.length; i++){
+        let letter = word[i]
+
+        let remainingChars = word.slice(0, i) + word.slice(i + 1, word.length)
+
+        for (let permutation of generateCombinations(remainingChars)){
+            permutationsArray.push(letter + permutation)
         }
-
-        let firstLettter = splitedWord.shift()
-        splitedWord.push(firstLettter)
     }
-
-    return splitedCombinations
+    return permutationsArray
 })
 
 
