@@ -1,0 +1,178 @@
+const getRandomArray = (length, min, max) => {
+    const randomArray = []
+    for (i = 0; i < length; i++){
+        randomArray.push(Math.floor(Math.random() * (max - min) + min))
+    }
+
+    return randomArray
+}
+
+
+const isInteger = ((number) => {
+    if (isNaN(parseInt(number)) || (number - Math.floor(number)) !== 0) return false
+    else return true
+})
+
+
+const getModa = (...numbers) => {
+    numbers.sort((a,b) => a-b)
+    numbers = numbers.filter(number => isInteger(number))
+    let counter1 = 0
+    let counter2 = 0
+    let moda
+    
+    numbers.forEach((number, index, arr) => {
+        if(index === 0){
+            moda = number
+            counter2 += 1
+        } else if(number == arr[index-1]){
+            counter2 += 1
+        } else if (counter2 > counter1){
+            counter1 = counter2
+            counter2 = 1
+            moda = arr[index-1]
+        } else {
+            counter2 = 1
+        }
+    })
+
+    if(counter2 > counter1) moda = numbers[numbers.length-1]
+
+    return moda
+}
+
+
+const getAverage = ((...numbers) => {
+    numbers = numbers.filter(number => isInteger(number))
+    const sumOfNumbers = numbers.reduce((total, number) => total + number)
+    return sumOfNumbers/numbers.length
+})
+
+
+const getMedian = ((...numbers) => {
+    numbers = numbers.filter(number => isInteger(number))
+    numbers.sort((a,b) => a-b)
+
+    //перевіряє кількість елементів масиву на парність і в залежності від цього вираховує медіану
+    if (numbers.length & 1){
+        return numbers[Math.floor(numbers.length/2)] 
+    } else{
+        return (numbers[numbers.length/2] + numbers[numbers.length/2+1])/2
+    }
+})
+
+
+const filterEvenNumbers = ((...numbers) => {
+    return numbers.filter((number, index) => !(index & 1))
+})
+
+
+const countPositiveNumbers = ((...numbers) => {
+    return numbers.reduce((countOfPositiveNumbers, number) => {
+        if (number > 0){
+            return countOfPositiveNumbers + 1
+        } else {
+            return countOfPositiveNumbers
+        }
+    })
+})
+
+
+const getDividedByFive = ((...numbers) => {
+    return numbers.filter(number => isInteger(number/5))
+})
+
+
+const replaceBadWords = ((string) => {
+    const badWords = ["shit", "fuck"]
+    const words = string.split(" ")
+
+    const correctedWords = words.map((word) =>{
+        let goodWord = ""
+
+        for(badWord of badWords) {
+            if(word.includes(badWord)){
+                goodWord = '*'.repeat(badWord.length) + word.slice(badWord.length)
+            } else {
+                goodWord = word
+            }
+        }
+
+        return goodWord
+    })
+
+    return correctedWords.join(" ")
+})
+
+
+const divideByThree = ((word) => {
+    const countOfCompositions = word.length/3
+    word.replace(" ", "")
+    wordCompositions = []
+
+    if(word.length < 3){
+        return "Wrong word!"
+    } else{
+        for(i = 0; i <= countOfCompositions; i++){
+            wordCompositions.push(word.slice(0, 3))
+            word = word.slice(3)
+        }
+    }
+
+    return wordCompositions
+})
+
+
+const factorial = ((num) => {
+    if (num === 0)
+      { return 1; }
+    else
+      { return num * factorial( num - 1 ); }
+})
+
+
+const generateCombinations = ((word) => {
+    const splitedCombinations = []
+    const splitedWord = word.split("")
+    countOfLetters = word.length
+    countOfWords = factorial(countOfLetters) //кількість комбінацій букв
+
+    //заповнює масив пустими значеннями
+    for(i = 0; i < countOfWords; i++){
+        splitedCombinations[i] = ""
+    }
+    
+    for(j = 0; j < countOfLetters; j++){ //j-позиція на якій буде стояти буква в слові
+        for(i = 0; i < countOfLetters; i++){ //і-індекс букви в слові яку будемо додавати
+            for(k = i; k < countOfWords; k+=countOfLetters){ //к-індекс слова в яке додаємо букву
+                splitedCombinations[k]+=splitedWord[i]
+            }
+        }
+
+        let firstLettter = splitedWord.shift()
+        splitedWord.push(firstLettter)
+    }
+
+    return splitedCombinations
+})
+
+
+document.writeln(`Масив випадкових чисел: ${getRandomArray(10, 1, 100)} <br>`)
+
+document.writeln(`Мода: ${getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)} <br>`)
+
+document.writeln(`Середнє арифметичне: ${getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)} <br>`)
+
+document.writeln(`Медіана: ${getMedian(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)} <br>`)
+
+document.writeln(`Непарні числа: ${filterEvenNumbers(1, 2, 3, 4, 5, 6)} <br>`)
+
+document.writeln(`Кількість чисел більше нуля: ${countPositiveNumbers(1, -2, 3, -4, -5, 6)} <br>`)
+
+document.writeln(`Числа кратні 5: ${getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)} <br>`)
+
+document.writeln(`Виправлене речення: ${replaceBadWords("Are you fucking kidding?")} <br>`)
+
+document.writeln(`Слово поділене на склади по 3 букви: ${divideByThree("Commander")} <br>`)
+
+document.writeln(`Усі комбінації без повторень: ${generateCombinations("duck")}`)
