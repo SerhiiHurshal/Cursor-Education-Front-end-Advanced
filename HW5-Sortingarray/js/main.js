@@ -8,15 +8,15 @@ const getRandomArray = (length, min, max) => {
 }
 
 
-const isInteger = ((number) => {
-    if (isNaN(parseInt(number)) || (number - Math.floor(number)) !== 0) return false
-    else return true
+const deleteNotIntElements = ((arr) => {
+    arr = arr.filter(element => Number.isInteger(element))
+    return arr
 })
 
 
 const getModa = (...numbers) => {
     numbers.sort((a,b) => a-b)
-    numbers = numbers.filter(number => isInteger(number))
+    numbers = deleteNotIntElements(numbers)
     let counter1 = 0
     let counter2 = 0
     let moda
@@ -43,14 +43,14 @@ const getModa = (...numbers) => {
 
 
 const getAverage = ((...numbers) => {
-    numbers = numbers.filter(number => isInteger(number))
+    numbers = deleteNotIntElements(numbers)
     const sumOfNumbers = numbers.reduce((total, number) => total + number)
     return sumOfNumbers/numbers.length
 })
 
 
 const getMedian = ((...numbers) => {
-    numbers = numbers.filter(number => isInteger(number))
+    numbers = deleteNotIntElements(numbers)
     numbers.sort((a,b) => a-b)
 
     //перевіряє кількість елементів масиву на парність і в залежності від цього вираховує медіану
@@ -68,18 +68,12 @@ const filterEvenNumbers = ((...numbers) => {
 
 
 const countPositiveNumbers = ((...numbers) => {
-    return numbers.reduce((countOfPositiveNumbers, number) => {
-        if (number > 0){
-            return countOfPositiveNumbers + 1
-        } else {
-            return countOfPositiveNumbers
-        }
-    })
+    return numbers.filter((number) => number > 0).length
 })
 
 
 const getDividedByFive = ((...numbers) => {
-    return numbers.filter(number => isInteger(number/5))
+    return numbers.filter(number => Number.isInteger(number/5))
 })
 
 
@@ -90,13 +84,13 @@ const replaceBadWords = ((string) => {
     const correctedWords = words.map((word) =>{
         let goodWord = ""
 
-        for(badWord of badWords) {
+        badWords.forEach((badWord) => {
             if(word.includes(badWord)){
                 goodWord = '*'.repeat(badWord.length) + word.slice(badWord.length)
             } else {
                 goodWord = word
             }
-        }
+        })
 
         return goodWord
     })
