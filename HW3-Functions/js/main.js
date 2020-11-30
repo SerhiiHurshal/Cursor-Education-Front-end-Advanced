@@ -67,9 +67,11 @@ const convertCurrency = (money) =>{
 
     if (money.search(dollarPatt) >= 0){
         const inHryvnias = +money.replace(dollarPatt, "")*DOLLAR_EXCHANGE_RATE_TO_UAH
+        if(isNaN(inHryvnias)) return "Wrong syntax!"
         return `${inHryvnias} грн.`
     } else if(money.search(UAHPatt) >= 0){
         const inDollars = +money.replace(UAHPatt, "")/DOLLAR_EXCHANGE_RATE_TO_UAH
+        if(isNaN(inDollars)) return "Wrong syntax!"
         return `${inDollars}$`
     } else {
         return "Wrong syntax!"
