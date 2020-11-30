@@ -28,15 +28,17 @@ const toPower = (number, power) =>{
 
 
 const formatName = (name) => {
-    firstChar = name.charAt(0).toUpperCase()
-    restName = name.slice(1).toLowerCase()
+    const firstChar = name.charAt(0).toUpperCase()
+    const restName = name.slice(1).toLowerCase()
 
     return firstChar + restName
 }
 
 
 const netSalary = (salary) =>{
-    result = (salary*80.5)/100
+    const PERCENT_WITHOUT_TAX = 100 - 19.5
+
+    const result = (salary*PERCENT_WITHOUT_TAX)/100
 
     return result
 }
@@ -59,11 +61,15 @@ const countLetter = (letter, word) =>{
 
 
 const convertCurrency = (money) =>{
-    if (money.charAt(0) === '$'){
-        const inHryvnias = +money.slice(1)*25
+    const DOLLAR_EXCHANGE_RATE_TO_UAH = 25
+    const dollarPatt = /\$/gi 
+    const UAHPatt = /UAH/gi
+
+    if (money.search(dollarPatt) >= 0){
+        const inHryvnias = +money.replace(dollarPatt, "")*DOLLAR_EXCHANGE_RATE_TO_UAH
         return `${inHryvnias} грн.`
-    } else if(money.slice(money.length-3) === "UAH"){
-        const inDollars = +money.slice(0, money.length - 3)/25
+    } else if(money.search(UAHPatt) >= 0){
+        const inDollars = +money.replace(UAHPatt, "")/DOLLAR_EXCHANGE_RATE_TO_UAH
         return `${inDollars}$`
     } else {
         return "Wrong syntax!"
@@ -72,7 +78,7 @@ const convertCurrency = (money) =>{
 
 
 const getRandomPassword = (lengthOFPassword = 8) =>{
-    password = ''
+    let password = ''
 
     for (i = 0; i < lengthOFPassword; i++){
         password += getRandomNumber(0,9)
@@ -84,7 +90,7 @@ const getRandomPassword = (lengthOFPassword = 8) =>{
 
 const deleteLetters = (letter, word) =>{
     while(word.includes(letter)){
-        indexOfLetter = word.indexOf(letter)
+        let indexOfLetter = word.indexOf(letter)
         if (word.charAt(indexOfLetter) === letter)
             word = word.slice(0,indexOfLetter) + word.slice(indexOfLetter+1)
     }
@@ -95,7 +101,7 @@ const deleteLetters = (letter, word) =>{
 
 const isPalyndrom = (word) =>{
     const toLowerWord = word.toLowerCase()
-    reversedWord = ''
+    let reversedWord = ''
 
     for (i = toLowerWord.length; i >= 0; i--){
         reversedWord += toLowerWord.charAt(i)
