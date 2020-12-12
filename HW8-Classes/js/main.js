@@ -46,12 +46,12 @@ class Student{
 
 
 class BudgetStudent extends Student{
-    constructor(university, course, fullName, isDismissed){
-        super(university, course, fullName, isDismissed)
+    constructor(university, course, fullName){
+        super(university, course, fullName)
         const interval = setInterval(() => {
             if(this.getAverageMark() > 4 && !this.isDismissed){
                 console.log(`Студент, ${this.fullName}, отримав 1400 грн. стипендії`)
             }
-        },30000)
+        },3000)
     }
 } 

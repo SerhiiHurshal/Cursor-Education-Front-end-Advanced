@@ -46,4 +46,4 @@ document.write(`Cкільки у середньому податків плат�
 document.write(`Cкільки всього податків платять IT-спеціалісти: ${getTotalTaxes.call(ukraine)} <br>`)
 document.write(`Таймер був запущений, об'єкти виводяться у консоль<br>`)
 
-const timer  = setInterval(() => getMySalary.call(ukraine), 1000)
+const timer  = setInterval(() => getMySalary.call(ukraine), 10000)
