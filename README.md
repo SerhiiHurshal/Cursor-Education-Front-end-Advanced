@@ -10,3 +10,4 @@ HW5-Sortingarray | [folder](https://github.com/SergiyGurshal/Cursor-Education-Fr
 HW6-Objects | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW6-Objects) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW6-Objects/)
 HW7-Locking_Key word this | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW7-Locking_Key%20word%20this) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW7-Locking_Key%20word%20this/)
 HW8-Classes | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW8-Classes) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW8-Classes/)
+HW9-DOM | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW9-DOM) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW9-DOM/)
