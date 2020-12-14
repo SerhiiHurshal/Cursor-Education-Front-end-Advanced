@@ -16,9 +16,15 @@ h3  {
 }
 
 pre{
-    font-size: 22px;
+    font-size: 20px;
     padding-left: 35%;
     font-weight: bold;
+}
+
+p{
+    font-size: 18px;
+    padding-left: 41%;
+    color: rgba(59, 59, 59, 90%);
 }
 
 button{
