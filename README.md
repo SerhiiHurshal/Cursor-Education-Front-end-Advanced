@@ -12,3 +12,4 @@ HW7-Locking_Key word this | [folder](https://github.com/SergiyGurshal/Cursor-Edu
 HW8-Classes | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW8-Classes) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW8-Classes/)
 HW9-DOM | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW9-DOM) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW9-DOM/)
 HW10-Events | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW10-Events) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW10-Events/)
+HW11-Promises | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW11-Promises) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW11-Promises/)
