@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HW12-Ajax</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        
+    </head>
+    <body>
+        <header>
+            <h1 class="title">Choose episode</h1>
+            <div id="buttonsOfEppisode">
+                <button id="episodeBtn1" class="episodeBtns">1</button>
+                <button id="episodeBtn2" class="episodeBtns">2</button>
+                <button id="episodeBtn3" class="episodeBtns">3</button>
+                <button id="episodeBtn4" class="episodeBtns">4</button>
+                <button id="episodeBtn5" class="episodeBtns">5</button>
+                <button id="episodeBtn6" class="episodeBtns">6</button>
+            </div>
+        </header>
+
+        <div id="planets">
+            <h1 class="title">List of planets</h1>
+            <div id="prevBtnDiv"><button id="prevPlanetsPage" class="navButtons">Back</button></div>
+            <table id="planetsList">
+                <td>
+                    <ul>
+                        <li class="planetName"></li>
+                        <li class="planetName"></li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li class="planetName"></li>
+                        <li class="planetName"></li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li class="planetName"></li>
+                        <li class="planetName"></li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li class="planetName"></li>
+                        <li class="planetName"></li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li class="planetName"></li>
+                        <li class="planetName"></li>
+                    </ul>
+                </td>
+            </table>
+            <div id="nextBtnDiv"><button id="nextPlanetsPage" class="navButtons">Next</button></div>
+        </div>
+
+        <template id="characterInfo">
+            <table>
+                <tr>
+                    <td id="charImg" rowspan="2" ><img></td>
+                    <td class="charInfoText">Name:</td>
+                    <td id="charName" class="charInfoText">Character Name</td>
+                </tr>
+                <tr>
+                    <td class="charInfoText">Birth date:</td>
+                    <td id="charBirth" class="charInfoText">10.12.12341</td>
+                </tr>
+                <tr>
+                    <td id="genderImg"><img></td>
+                    <td class="charInfoText">Gender:</td>
+                    <td id="charGender" class="charInfoText">male</td>
+                </tr>
+    
+            </table>
+        </template>
+
+        <script src="js/fillHTML.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

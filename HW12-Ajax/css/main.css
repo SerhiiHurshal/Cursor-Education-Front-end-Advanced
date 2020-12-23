@@ -1,0 +1,85 @@
+.title{
+    font-size: 60px;
+    color: rgb(199, 199, 199);
+    text-align: center;
+}
+
+.episodeBtns{
+    background-color:  rgb(199, 199, 199);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
+    height: 40px;
+    transition-duration: 0.4s;
+}
+
+.episodeBtns:hover{
+    background-color:  rgb(116, 116, 116);
+    border: black;
+}
+
+#buttonsOfEppisode{
+    text-align: center;
+}
+
+body{
+    background-image: url("../img/star-wars-backgrounds-14.jpg");
+}
+
+.navButtons{
+    background-color:  rgb(199, 199, 199);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
+    height: 40px;
+    transition-duration: 0.4s;
+}
+
+.navButtons:hover{
+    background-color:  rgb(116, 116, 116);
+    border: black;
+}
+
+#planetsList{
+    display: inline;
+}
+
+#prevBtnDiv{
+    display: inline;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+#nextBtnDiv{
+    display: inline;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.planetName{
+    font-size: 40px;
+    color:  rgb(199, 199, 199);
+}
+
+#planets{
+    text-align: center;
+}
+
+.charInfoText{
+    color:  rgb(199, 199, 199);
+    font-size: 20px;
+    padding: 15px;
+}
+
+#charImg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#genderImg{
+    width: 30px;
+    height: 30px;
+}
