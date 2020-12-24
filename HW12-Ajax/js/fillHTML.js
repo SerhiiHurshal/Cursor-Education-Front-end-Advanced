@@ -27,77 +27,52 @@ const addCharInfoToHtml = (character) => {
     header.parentNode.insertBefore(clone, header.nextSibling);
 }
 
-const cleanHTML = () => {
+function addCharacters () {
     const tables = document.querySelectorAll("table")
     tables.forEach((table) => {
         if(table.id !== "planetsList"){
             table.remove()
         }
     })
+
+    getPeopleFromEpisode(this.episode)
 }
 
 
-async function getCharactersFromPromise () {
-    deleteCharacters()
-    cleanHTML()
-    let characters 
-    await getListOfCharacters(this.episode).then(data => {
-        characters = data
-        console.log(characters)
-    })
-    await setTimeout(() => characters.map((character) => addCharInfoToHtml(character)), 4000)
-}
+document.querySelector("#episodeBtn1").addEventListener("click", {handleEvent: addCharacters, episode: 1})
+
+document.querySelector("#episodeBtn2").addEventListener("click", {handleEvent: addCharacters, episode: 2})
+
+document.querySelector("#episodeBtn3").addEventListener("click", {handleEvent: addCharacters, episode: 3})
+
+document.querySelector("#episodeBtn4").addEventListener("click", {handleEvent: addCharacters, episode: 4})
+
+document.querySelector("#episodeBtn5").addEventListener("click", {handleEvent: addCharacters, episode: 5})
+
+document.querySelector("#episodeBtn6").addEventListener("click", {handleEvent: addCharacters, episode: 6})
 
 
-document.querySelector("#episodeBtn1").addEventListener("click", {handleEvent: getCharactersFromPromise, episode: 1})
-
-document.querySelector("#episodeBtn2").addEventListener("click", {handleEvent: getCharactersFromPromise, episode: 2})
-
-document.querySelector("#episodeBtn3").addEventListener("click", {handleEvent: getCharactersFromPromise, episode: 3})
-
-document.querySelector("#episodeBtn4").addEventListener("click", {handleEvent: getCharactersFromPromise, episode: 4})
-
-document.querySelector("#episodeBtn5").addEventListener("click", {handleEvent: getCharactersFromPromise, episode: 5})
-
-document.querySelector("#episodeBtn6").addEventListener("click", {handleEvent: getCharactersFromPromise, episode: 6})
-
-const getPlanetsList = () => {
-    const planetsNames = []
-
-    for(i=1;i<61;i++){
-        fetch(`https://swapi.dev/api/planets/${i}`)
-            .then((response) => {
-                return response.json()
-            })
-            .then((data) => {
-                planetsNames.push(data.name)
-            })
-    }
-
-    return planetsNames
-}
+let page = 1
 
 
-let planets 
-let page
 const fillPlanetsListFirstTime = () => {
-    page = 0
-    const table = document.querySelector("#planetsList")
+    getPlanets(page)
+}
 
-    const listItems = table.querySelectorAll("li")
 
-    for(i = 0; i < 10; i++){
-        listItems[i].textContent = planets[i]
+const NextPageOfPlanets = () => {
+    if(page < 6){
+        page += 1
+        getPlanets(page)
     }
 }
 
-
-async function getPlanetsFromPromise () {
-    planets = getPlanetsList()
-    await setTimeout(() => {fillPlanetsListFirstTime()}, 3000)
+const PrevPageOfPlanets = () => {
+    if (page > 1){
+        page -= 1
+        getPlanets(page)
+    }
 }
-
-getPlanetsFromPromise()
 
 
 const deletePrevListItems = () => {
@@ -111,40 +86,17 @@ const deletePrevListItems = () => {
 }
 
 
-const fillNextPage = () => {
-    if(page < 5){
-        deletePrevListItems()
-        
-        page += 1
+document.querySelector("#nextPlanetsPage").addEventListener("click", NextPageOfPlanets)
+document.querySelector("#prevPlanetsPage").addEventListener("click", PrevPageOfPlanets)
 
-        const table = document.querySelector("#planetsList")
+const addPlanetNameToList = (planets) => {
+    const table = document.querySelector("#planetsList")
+    const listItems = table.querySelectorAll("li")
 
-        const listItems = table.querySelectorAll("li")
-
-        for(i = page*10, j = 0; i < 10+10*page; i++, j++){
-            listItems[j].textContent = planets[i]
-        }
-
-    }
+    planets.map((planet, i) => {
+        listItems[i].textContent = planet.name
+    })
 }
 
 
-const fillPrevPage = () => {
-    if(page > 0){
-        deletePrevListItems()
-
-        page -= 1
-
-        const table = document.querySelector("#planetsList")
-
-        const listItems = table.querySelectorAll("li")
-
-        for(i = page*10, j = 0; i < 10+10*page; i++, j++){
-            listItems[j].textContent = planets[i]
-        }
-    }
-}
-
-
-document.querySelector("#nextPlanetsPage").addEventListener("click", fillNextPage)
-document.querySelector("#prevPlanetsPage").addEventListener("click", fillPrevPage)
+fillPlanetsListFirstTime()

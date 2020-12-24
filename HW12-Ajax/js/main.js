@@ -1,71 +1,41 @@
-let characters = []
-
-
-class Character{
-    constructor(name, birthYear, gender){
-        this._name = name
-        this._birthYear = birthYear
-        this._gender = gender
-    }
-
-    get name() {
-        return this._name
-    }
-
-    get birthYear() {
-        return this._birthYear
-    }
-
-    get gender() {
-        return this._gender
-    }
-
-    get genderIco() {
-        if(this._gender === "n/a" || this._gender === "none"){
-            return `img/none.png`
-        }
-        return `img/${this._gender}.png`
-    }
-
-    get charactersIco() {
-        return `img/${this._name}.jpg`
-    }
-}
-
-
-const getPeopleFromEpisode = (episodeNumber) => {
-    fetch(`https://swapi.dev/api/films/${episodeNumber}/`)
+const getPeopleFromEpisode = (episode) => {
+    fetch(`https://swapi.dev/api/films/${episode}/`)
         .then((response) => {
             return response.json()
         })
-        .then((data) => {
-            data.characters.forEach((character) => {
-                makeClassObject(character)
+        .then((filmInfo) => {
+            return filmInfo.characters
+        })
+        .then((charactersURL) => {
+            charactersURL.map((characterURL) => {
+                fetch(characterURL)
+                    .then((response) => {
+                        return response.json()
+                    })
+                    .then((characterInfo) => {
+                        let genderIco
+                        if(characterInfo.gender === "n/a" || characterInfo.gender === "none") genderIco =  `img/none.png`
+                        else genderIco =  `img/${characterInfo.gender}.png`
+
+                        const character = {
+                            name: characterInfo.name,
+                            birthYear: characterInfo.birth_year,
+                            gender: characterInfo.gender,
+                            genderIco: genderIco,
+                            charactersIco: `img/${characterInfo.name}.jpg`
+                        }
+
+                        addCharInfoToHtml(character)
+                    })
             })
         })
 }
 
-
-const makeClassObject = (url) => {
+async function getPlanets (page) {
+    deletePrevListItems()
+    const url = `https://swapi.dev/api/planets/?page=${page}`
     fetch(url)
         .then((response) => {
-            return response.json()
+            return response.json().then((response) => addPlanetNameToList(response.results))
         })
-        .then((data) => {
-            const name = data.name
-            const birthYear = data.birth_year
-            const gender = data.gender
-
-            const character = new Character(name, birthYear, gender)
-            characters.push(character)
-        })
-}
-
-const deleteCharacters = () => {
-    characters = []
-}
-
-async function getListOfCharacters (numberOfEpisod){
-    await setTimeout(() => getPeopleFromEpisode(numberOfEpisod), 0)
-    return characters
-}
+    }
