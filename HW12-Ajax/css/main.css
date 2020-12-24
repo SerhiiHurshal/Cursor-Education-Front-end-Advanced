@@ -4,6 +4,12 @@
     text-align: center;
 }
 
+#titleListOfPlanets{
+    display: inline;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 .episodeBtns{
     background-color:  rgb(199, 199, 199);
     border-radius: 10px;
@@ -50,13 +56,11 @@ body{
 #prevBtnDiv{
     display: inline;
     text-align: left;
-    margin-bottom: 30px;
 }
 
 #nextBtnDiv{
     display: inline;
     text-align: right;
-    margin-bottom: 30px;
 }
 
 .planetName{
@@ -66,12 +70,13 @@ body{
 
 #planets{
     text-align: center;
+    margin-top: 70px;
 }
 
 .charInfoText{
     color:  rgb(199, 199, 199);
     font-size: 20px;
-    padding: 15px;
+    padding: 10px;
 }
 
 #charImg{

@@ -21,8 +21,12 @@
         </header>
 
         <div id="planets">
-            <h1 class="title">List of planets:</h1>
-            <div id="prevBtnDiv"><button id="prevPlanetsPage" class="navButtons">Back</button></div>
+            <div id="titielAndButtons">
+                <div id="prevBtnDiv"><button id="prevPlanetsPage" class="navButtons">Back</button></div>
+                <h1 class="title" id="titleListOfPlanets">List of planets</h1>
+                <div id="nextBtnDiv"><button id="nextPlanetsPage" class="navButtons">Next</button></div>
+            </div>
+            
             <table id="planetsList">
                 <td>
                     <ul>
@@ -55,13 +59,12 @@
                     </ul>
                 </td>
             </table>
-            <div id="nextBtnDiv"><button id="nextPlanetsPage" class="navButtons">Next</button></div>
         </div>
 
         <template id="characterInfo">
             <table>
                 <tr>
-                    <td id="charImg" rowspan="2" ><img></td>
+                    <td id="charImg" rowspan="3" ><img></td>
                     <td class="charInfoText">Name:</td>
                     <td id="charName" class="charInfoText">Character Name</td>
                 </tr>
@@ -70,9 +73,9 @@
                     <td id="charBirth" class="charInfoText">10.12.12341</td>
                 </tr>
                 <tr>
-                    <td id="genderImg"><img></td>
                     <td class="charInfoText">Gender:</td>
                     <td id="charGender" class="charInfoText">male</td>
+                    <td id="genderImg" class="charInfoText"><img></td>
                 </tr>
     
             </table>

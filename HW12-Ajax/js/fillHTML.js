@@ -5,8 +5,8 @@ const addCharInfoToHtml = (character) => {
     const avatar = td[0].querySelector("img")
     const charName = td[2]
     const charBirth = td[4]
-    const genderIco = td[5].querySelector("img")
-    const charGender = td[7]
+    const genderIco = td[7].querySelector("img")
+    const charGender = td[6]
 
     avatar.src = character.charactersIco
     avatar.style.width = "150px"
@@ -15,7 +15,7 @@ const addCharInfoToHtml = (character) => {
     genderIco.src = character.genderIco
     genderIco.style.width = "30px"
     genderIco.style.height = "30px"
-    genderIco.style.borderRadius = "50%"
+    genderIco.style.borderRadius = "0%"
 
     charName.textContent = character.name
     charBirth.textContent = character.birthYear

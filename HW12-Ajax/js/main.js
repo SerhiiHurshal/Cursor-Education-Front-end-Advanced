@@ -22,7 +22,7 @@ class Character{
 
     get genderIco() {
         if(this._gender === "n/a" || this._gender === "none"){
-            return `img/none.jpg`
+            return `img/none.png`
         }
         return `img/${this._gender}.png`
     }
