@@ -25,6 +25,7 @@
 
 body{
     background-image: url("../img/star-wars-backgrounds-14.jpg");
+    background-attachment: fixed;
 }
 
 .navButtons{
