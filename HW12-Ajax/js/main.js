@@ -31,7 +31,7 @@ const getPeopleFromEpisode = (episode) => {
         })
 }
 
-async function getPlanets (page) {
+const getPlanets = (page) => {
     deletePrevListItems()
     const url = `https://swapi.dev/api/planets/?page=${page}`
     fetch(url)
