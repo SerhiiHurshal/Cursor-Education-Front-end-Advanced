@@ -27,15 +27,23 @@ const addCharInfoToHtml = (character) => {
     header.parentNode.insertBefore(clone, header.nextSibling);
 }
 
-function addCharacters () {
-    const tables = document.querySelectorAll("table")
-    tables.forEach((table) => {
-        if(table.id !== "planetsList"){
-            table.remove()
-        }
-    })
 
-    getPeopleFromEpisode(this.episode)
+let prevEpisodeNumber = 0
+
+
+function addCharacters () {
+    if(prevEpisodeNumber !== this.episode){
+        prevEpisodeNumber = this.episode
+
+        const tables = document.querySelectorAll("table")
+        tables.forEach((table) => {
+            if(table.id !== "planetsList"){
+                table.remove()
+            }
+        })
+
+        getPeopleFromEpisode(this.episode)
+    }
 }
 
 
@@ -81,7 +89,7 @@ const deletePrevListItems = () => {
     const listItems = table.querySelectorAll("li")
 
     for(i = 0; i < 10; i++){
-        listItems[i].textContent = ""
+        listItems[i].textContent = "loading..."
     }
 }
 
