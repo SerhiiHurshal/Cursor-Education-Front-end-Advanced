@@ -1,4 +1,4 @@
-#studentsTitle{
+#studentsTitle {
     padding-left: 60%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -10,29 +10,26 @@
     margin: 0;
 }
 
-
-#addStudentTable{
+#addStudentTable {
     padding-left: 2%;
     padding-top: 5px;
     font-weight: bold;
     font-style: italic;
 }
 
-
-.addStudentTableEl{
+.addStudentTableEl {
     padding-bottom: 7px;
     padding-left: 5px;
 }
 
-
-header{
+header {
     border-bottom-color: #707070;
     border-bottom-width: 3px;
     border-bottom-style: solid;
     margin-bottom: 10px;
 }
 
-body{
+body {
     margin: 0;
     background-color: rgba(82, 101, 196, 22%);
 }

@@ -1,68 +1,65 @@
-#genID{
-    width: fit-content;
-    text-align: center;
-    display: inline-block;
-    margin-top: 5%;
-    border-style: solid;
-    border-color:white;
-    border-width: 2px;
+#genID {
+  width: fit-content;
+  text-align: center;
+  display: inline-block;
+  margin-top: 5%;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
 }
 
-.fontSizeBtns{
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border-radius: 50%;
-    display: inline;
-    border-style: solid;
-    border-color:white;
-    border-width: 3px;
-    border-radius: 50%;
-    color: white;
-    font-weight: 100;
-    font-size: 20px;
-    background-color: rgba(255, 255, 255, 0);
-    margin: 20px;
-    
+.fontSizeBtns {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 50%;
+  color: white;
+  font-weight: 100;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  margin: 20px;
 }
 
-#genIdBtn{
-    display: inline;
-    margin-top: 45px;
-    background-color: rgba(255, 255, 255, 0);
-    border-style: solid;
-    border-color:white;
-    border-width: 3px;
-    color: white;
-    font-weight: 100;
-    font-size: 20px;
-    border-radius: 5px;
+#genIdBtn {
+  display: inline;
+  margin-top: 45px;
+  background-color: rgba(255, 255, 255, 0);
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  color: white;
+  font-weight: 100;
+  font-size: 20px;
+  border-radius: 5px;
 }
 
-#genIDBtns{
-    text-align: center;
+#genIDBtns {
+  text-align: center;
 }
 
-body{
-    background-color: red;
-    text-align: center;
+body {
+  background-color: red;
+  text-align: center;
 }
 
-#genIdBtnDiv{
-    text-align: center;
+#genIdBtnDiv {
+  text-align: center;
 }
 
-#idHeader{
-    color: white;
-    font-size: 14px;
-    margin-top: 30px;
-    margin-bottom: 10px;
+#idHeader {
+  color: white;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-#title{
-    color: white;
-    font-size: 50px;
-    margin-bottom: 0;
+#title {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 0;
 }
-
-

@@ -1,60 +1,71 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>HW8-Classes</title>
-  <link rel="stylesheet" type="text/css" href="css/main.css">
- </head>
- <body>
-     <header>
-         <h2 id="studentsTitle">Students</h2>
-         <table id="addStudentTable">
-            <tr>
-                <td class="addStudentTableEl">University</td>
-                <td class="addStudentTableEl"><input id = "University" type="text" name="University"></td>
-                <td class="addStudentTableEl" rowspan="4" ><button onclick="addStudent()" >Add</button></td>
-            </tr>
-            <tr>
-                <td class="addStudentTableEl">Course</td>
-                <td class="addStudentTableEl"><input id = "Course" type="number" name="Course"></td>
-            </tr>
-            <tr>
-                <td class="addStudentTableEl">FullName</td>
-                <td class="addStudentTableEl"><input id = "Fullname" type="text" name="FullName"></td> 
-            </tr>
-            <tr>
-                <td class="addStudentTableEl">Is on budget</td>
-                <td class="addStudentTableEl"><input id = "IsOnBudget" type="checkbox" name="Is on budget"></td>
-            </tr>
-         </table>
-     </header>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HW8-Classes</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <h2 id="studentsTitle">Students</h2>
+      <table id="addStudentTable">
+        <tr>
+          <td class="addStudentTableEl">University</td>
+          <td class="addStudentTableEl">
+            <input id="University" type="text" name="University" />
+          </td>
+          <td class="addStudentTableEl" rowspan="4">
+            <button onclick="addStudent()">Add</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="addStudentTableEl">Course</td>
+          <td class="addStudentTableEl">
+            <input id="Course" type="number" name="Course" />
+          </td>
+        </tr>
+        <tr>
+          <td class="addStudentTableEl">FullName</td>
+          <td class="addStudentTableEl">
+            <input id="Fullname" type="text" name="FullName" />
+          </td>
+        </tr>
+        <tr>
+          <td class="addStudentTableEl">Is on budget</td>
+          <td class="addStudentTableEl">
+            <input id="IsOnBudget" type="checkbox" name="Is on budget" />
+          </td>
+        </tr>
+      </table>
+    </header>
 
-     <template id="studentUI">
-        <table>
-            <tr>
-                <td rowspan="2"><img src="img/001.svg"></td>
-                <td rowspan="2" colspan="2" style="max-width: 300px;"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td colspan="2"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Add mark</td>
-                <td><input type="number"></td>
-                <td><button onclick="addMark(event)">Add</button></td>
-                <td><button onclick="dismissOrRecoverStudent(event)">Dismiss</button></td>
-            </tr>
+    <template id="studentUI">
+      <table>
+        <tr>
+          <td rowspan="2"><img src="img/001.svg" /></td>
+          <td rowspan="2" colspan="2" style="max-width: 300px"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Add mark</td>
+          <td><input type="number" /></td>
+          <td><button onclick="addMark(event)">Add</button></td>
+          <td>
+            <button onclick="dismissOrRecoverStudent(event)">Dismiss</button>
+          </td>
+        </tr>
+      </table>
+    </template>
 
-        </table>
-     </template>
-
-     <script src="js/fill-html.js"></script>
+    <script src="js/fill-html.js"></script>
     <script src="js/main.js"></script>
- </body>
+  </body>
 </html>
