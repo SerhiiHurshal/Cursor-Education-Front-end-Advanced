@@ -14,3 +14,4 @@ HW9-DOM | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-A
 HW10-Events | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW10-Events) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW10-Events/)
 HW11-Promises | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW11-Promises) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW11-Promises/)
 HW12-Ajax | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW12-Ajax) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW12-Ajax/)
+HW13-Generators | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW13-Generators) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW13-Generators/)
