@@ -18,9 +18,9 @@ function* fontSize(n = 14) {
 
   while (true) {
     const commond = yield fontSize
-    if (commond === '+') {
+    if (commond === '+' && fontSize < 60) {
       yield (fontSize = fontSize + 2)
-    } else {
+    } else if (commond === '-' && fontSize > 15) {
       yield (fontSize = fontSize - 2)
     }
   }

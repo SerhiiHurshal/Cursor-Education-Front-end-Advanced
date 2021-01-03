@@ -1,5 +1,6 @@
 #genID {
   width: fit-content;
+  height: max-content;
   text-align: center;
   display: inline-block;
   margin-top: 5%;
@@ -66,4 +67,10 @@ body {
   font-size: 50px;
   margin-bottom: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.idHeaderContainer {
+  min-width: 150px;
+  min-height: 70px;
+  text-align: center;
 }
