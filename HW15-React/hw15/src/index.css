@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(46, 51, 97);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.post {
+  background-color: rgb(89, 0, 179);
+  max-width: 50%;
+  margin: 15px auto;
+  border: 1px solid rgba(211, 211, 211, 0);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.infoPanel {
+  display: flex;
+  max-width: 95%;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: rgb(77, 0, 153);
+  color: white;
+  font-family: Helvetica;
+}
+
+.contentPanel {
+  padding-top: 12px;
+  max-width: 95%;
+  margin: auto;
+  color: white;
+  font-family: Helvetica;
+}
+
+.avatar {
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+.userInfo {
+  flex-grow: 15;
+  padding-top: 15px;
+}
+
+.datePanel {
+  flex-grow: 1;
+  padding-top: 20px;
+}
+
+.namePanel {
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+
+.nickNamePanel {
+  color: lightgrey;
+}
+
+.contentImg {
+  display: flex;
+  justify-content: center;
+}
+
+.postImg {
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.likePanel {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.contentDiscription {
+  padding-bottom: 10px;
+  font-size: 20px;
+}
