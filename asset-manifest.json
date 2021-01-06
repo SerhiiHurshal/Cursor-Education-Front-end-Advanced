@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Cursor-Education-Front-end-Advanced/static/css/main.679933a3.chunk.css",
+    "main.js": "/Cursor-Education-Front-end-Advanced/static/js/main.7970c7a6.chunk.js",
+    "main.js.map": "/Cursor-Education-Front-end-Advanced/static/js/main.7970c7a6.chunk.js.map",
+    "runtime-main.js": "/Cursor-Education-Front-end-Advanced/static/js/runtime-main.04a0a510.js",
+    "runtime-main.js.map": "/Cursor-Education-Front-end-Advanced/static/js/runtime-main.04a0a510.js.map",
+    "static/js/2.33b0af26.chunk.js": "/Cursor-Education-Front-end-Advanced/static/js/2.33b0af26.chunk.js",
+    "static/js/2.33b0af26.chunk.js.map": "/Cursor-Education-Front-end-Advanced/static/js/2.33b0af26.chunk.js.map",
+    "static/js/3.3d0d9f31.chunk.js": "/Cursor-Education-Front-end-Advanced/static/js/3.3d0d9f31.chunk.js",
+    "static/js/3.3d0d9f31.chunk.js.map": "/Cursor-Education-Front-end-Advanced/static/js/3.3d0d9f31.chunk.js.map",
+    "index.html": "/Cursor-Education-Front-end-Advanced/index.html",
+    "static/css/main.679933a3.chunk.css.map": "/Cursor-Education-Front-end-Advanced/static/css/main.679933a3.chunk.css.map",
+    "static/js/2.33b0af26.chunk.js.LICENSE.txt": "/Cursor-Education-Front-end-Advanced/static/js/2.33b0af26.chunk.js.LICENSE.txt",
+    "static/media/like.523a12e1.svg": "/Cursor-Education-Front-end-Advanced/static/media/like.523a12e1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.04a0a510.js",
+    "static/js/2.33b0af26.chunk.js",
+    "static/css/main.679933a3.chunk.css",
+    "static/js/main.7970c7a6.chunk.js"
+  ]
+}
