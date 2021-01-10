@@ -17,3 +17,4 @@ HW12-Ajax | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end
 HW13-Generators | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW13-Generators) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW13-Generators/)
 HW14-Webpack | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW14-Webpack) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW14-Webpack/dist/)
 HW15-React-Intro | [folder](https://github.com/SergiyGurshal/HW15) | [page](https://sergiygurshal.github.io/HW15/)
+HW16-React-Classes | [folder](https://github.com/SergiyGurshal/HW16) | [page](https://sergiygurshal.github.io/HW16/)
