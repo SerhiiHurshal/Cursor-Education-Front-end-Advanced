@@ -18,3 +18,4 @@ HW13-Generators | [folder](https://github.com/SergiyGurshal/Cursor-Education-Fro
 HW14-Webpack | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-end-Advanced/tree/main/HW14-Webpack) | [page](https://sergiygurshal.github.io/Cursor-Education-Front-end-Advanced/HW14-Webpack/dist/)
 HW15-React-Intro | [folder](https://github.com/SergiyGurshal/HW15) | [page](https://sergiygurshal.github.io/HW15/)
 HW16-React-Classes | [folder](https://github.com/SergiyGurshal/HW16) | [page](https://sergiygurshal.github.io/HW16/)
+HW17-Component-Lifecycle | [folder](https://github.com/SergiyGurshal/HW17) | [page](https://sergiygurshal.github.io/HW17/)
