@@ -19,4 +19,5 @@ HW14-Webpack | [folder](https://github.com/SergiyGurshal/Cursor-Education-Front-
 HW15-React-Intro | [folder](https://github.com/SergiyGurshal/HW15) | [page](https://sergiygurshal.github.io/HW15/)
 HW16-React-Classes | [folder](https://github.com/SergiyGurshal/HW16) | [page](https://sergiygurshal.github.io/HW16/)
 HW17-Component-Lifecycle | [folder](https://github.com/SergiyGurshal/HW17) | [page](https://sergiygurshal.github.io/HW17/)
-HW17-React-Router | [folder](https://github.com/SergiyGurshal/HW18) | [page](https://sergiygurshal.github.io/home)
+HW18-React-Router | [folder](https://github.com/SergiyGurshal/HW18) | [page](https://sergiygurshal.github.io/home)
+HW19-React-Styled-Components | [folder](https://github.com/SergiyGurshal/HW19) | [page](https://sergiygurshal.github.io/HW19/#/)
