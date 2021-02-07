@@ -21,3 +21,5 @@ HW16-React-Classes | [folder](https://github.com/SergiyGurshal/HW16) | [page](ht
 HW17-Component-Lifecycle | [folder](https://github.com/SergiyGurshal/HW17) | [page](https://sergiygurshal.github.io/HW17/)
 HW18-React-Router | [folder](https://github.com/SergiyGurshal/HW18) | [page](https://sergiygurshal.github.io/home)
 HW19-React-Styled-Components | [folder](https://github.com/SergiyGurshal/HW19) | [page](https://sergiygurshal.github.io/HW19/#/)
+HW20-React-Redux | [folder](https://github.com/SergiyGurshal/HW-20) | [page](https://sergiygurshal.github.io/HW-20/)
+Hw21-Redux-Thunk | [folder](https://github.com/SergiyGurshal/HW-21) | [page](https://outgram.herokuapp.com/#/)
